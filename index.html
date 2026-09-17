@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termo de Compromisso Oficial</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f1f5f9; /* Fundo neutro */
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .contract-card {
+      background: #ffffff;
+      max-width: 480px;
+      width: 100%;
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: 0 10px 30px rgba(30, 41, 59, 0.08);
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1d4ed8; /* Azul principal */
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #64748b;
+      margin-bottom: 24px;
+    }
+
+    /* Silhueta de aperto de mãos */
+    .silhouette-wrapper {
+      margin: 20px auto 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .silhouette-icon {
+      width: 100px;
+      height: 100px;
+      fill: #2563eb;
+      opacity: 0.9;
+      filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.15));
+      transition: transform 0.3s ease;
+    }
+
+    .silhouette-icon:hover {
+      transform: scale(1.05);
+    }
+
+    /* Formulário */
+    .input-group {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .signature-input {
+      width: 100%;
+      padding: 14px 16px;
+      border: none;
+      border-bottom: 2px solid #94a3b8;
+      background: #f8fafc;
+      border-radius: 8px 8px 0 0;
+      font-size: 16px;
+      color: #0f172a;
+      outline: none;
+      text-align: center;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .signature-input:focus {
+      border-bottom-color: #2563eb;
+      background-color: #eff6ff;
+    }
+
+    .sign-btn {
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .sign-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .sign-btn:active {
+      transform: translateY(1px);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="contract-card">
+    <h1>Contrato de Namoro</h1>
+    
+    <p class="description">
+      Ao preencher este documento solene, você concorda em firmar um pacto irrevogável de carinho, beijinhos diários, paciência mútua e prioridade na escolha do cardápio do fim de semana.
+    </p>
+
+    <!-- Silhueta Vetorial: Mãos se apertando -->
+    <div class="silhouette-wrapper">
+      <svg class="silhouette-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.9 8.2c-.4-.4-1-.5-1.5-.2l-2.4 1.4-2.2-2.2c-.8-.8-2-.8-2.8 0L9.4 8.8 8 7.4c-.4-.4-1-.4-1.4 0L4.8 9.2c-.4.4-.4 1 0 1.4l2.1 2.1c-.8.8-.8 2 0 2.8l2.8 2.8c.8.8 2 .8 2.8 0l1.4-1.4 1.4 1.4c.4.4 1 .4 1.4 0l1.8-1.8c.4-.4.4-1 0-1.4l-1.4-1.4 2.1-1.2c.5-.3.7-.9.4-1.4l-.9-1.5zM12 16.2l-2.8-2.8c-.2-.2-.2-.5 0-.7l2.8-2.8c.2-.2.5-.2.7 0l2.8 2.8c.2.2.2.5 0 .7L12 16.2z"/>
+      </svg>
+    </div>
+
+    <!-- Campo para digitar o nome e botão -->
+    <form id="contractForm" class="input-group">
+      <input 
+        type="text" 
+        id="girlfriendName" 
+        class="signature-input" 
+        placeholder="Digite aqui sua assinatura (seu nome)" 
+        required 
+        autocomplete="off"
+      />
+      <button type="submit" class="sign-btn">Assinar e Validar Acordo</button>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById('contractForm');
+    const input = document.getElementById('girlfriendName');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = input.value.trim();
+      if (name) {
+        // Salva o nome para ler na página 2 e redireciona
+        localStorage.setItem('girlfriendContractName', name);
+        window.location.href = 'pagina2.html';
+      }
+    });
+  </script>
+</body>
+</html>
