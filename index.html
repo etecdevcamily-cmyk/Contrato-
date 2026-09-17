@@ -3,115 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termo de Compromisso Oficial</title>
+  <title>Contrato Oficial do Nosso Amor 💜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
     body {
-      background-color: #f1f5f9; /* Fundo neutro */
-      color: #1e293b;
+      font-family: 'Quicksand', sans-serif;
+      background: radial-gradient(circle at 50% 20%, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+      color: #4c1d95;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Brilhos suaves no fundo */
+    .sparkle-bg {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0.45;
+      animation: floatSparkle 4s ease-in-out infinite alternate;
+      user-select: none;
+    }
+
+    @keyframes floatSparkle {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-12px) rotate(15deg); }
     }
 
     .contract-card {
-      background: #ffffff;
-      max-width: 480px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      max-width: 460px;
       width: 100%;
-      border-radius: 20px;
-      padding: 40px 32px;
-      box-shadow: 0 10px 30px rgba(30, 41, 59, 0.08);
-      border: 1px solid #e2e8f0;
+      border-radius: 32px;
+      padding: 42px 32px;
+      box-shadow: 
+        0 20px 40px rgba(126, 34, 206, 0.12),
+        0 4px 16px rgba(168, 85, 247, 0.08),
+        inset 0 0 0 2px #ffffff;
+      border: 3px solid #f3e8ff;
       text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cute-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f3e8ff;
+      color: #7e22ce;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
     }
 
     h1 {
-      color: #1d4ed8; /* Azul principal */
+      font-family: 'Comfortaa', cursive;
+      color: #6b21a8;
       font-size: 26px;
       font-weight: 700;
-      margin-bottom: 14px;
-      letter-spacing: -0.5px;
+      margin-bottom: 12px;
     }
 
     .description {
       font-size: 15px;
       line-height: 1.6;
-      color: #64748b;
-      margin-bottom: 24px;
+      color: #6b7280;
+      margin-bottom: 20px;
+      padding: 0 8px;
     }
 
-    /* Silhueta de aperto de mãos */
+    /* Silhueta com efeito fofo e brilhinho */
     .silhouette-wrapper {
-      margin: 20px auto 28px;
+      position: relative;
+      width: 130px;
+      height: 130px;
+      margin: 10px auto 26px;
+      background: #faf5ff;
+      border: 3px dashed #d8b4fe;
+      border-radius: 50%;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(168, 85, 247, 0.15);
+      animation: pulseGently 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseGently {
+      0% { transform: scale(1); box-shadow: 0 8px 20px rgba(168, 85, 247, 0.15); }
+      100% { transform: scale(1.04); box-shadow: 0 12px 28px rgba(168, 85, 247, 0.25); }
     }
 
     .silhouette-icon {
-      width: 100px;
-      height: 100px;
-      fill: #2563eb;
-      opacity: 0.9;
-      filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.15));
-      transition: transform 0.3s ease;
+      width: 68px;
+      height: 68px;
+      fill: #8b5cf6;
+      filter: drop-shadow(0 3px 6px rgba(139, 92, 246, 0.35));
     }
 
-    .silhouette-icon:hover {
-      transform: scale(1.05);
+    .mini-heart-floating {
+      position: absolute;
+      top: 6px;
+      right: 12px;
+      font-size: 22px;
+      animation: heartBeat 1.4s ease-in-out infinite;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
     }
 
     /* Formulário */
     .input-group {
-      margin-top: 10px;
       display: flex;
       flex-direction: column;
       gap: 16px;
+      margin-top: 6px;
     }
 
     .signature-input {
       width: 100%;
-      padding: 14px 16px;
-      border: none;
-      border-bottom: 2px solid #94a3b8;
-      background: #f8fafc;
-      border-radius: 8px 8px 0 0;
+      padding: 15px 18px;
+      border: 2px solid transparent;
+      border-bottom: 2.5px solid #a855f7;
+      background: #faf5ff;
+      border-radius: 16px 16px 4px 4px;
       font-size: 16px;
-      color: #0f172a;
+      font-weight: 600;
+      color: #581c87;
       outline: none;
       text-align: center;
-      transition: border-color 0.2s, background-color 0.2s;
+      font-family: 'Quicksand', sans-serif;
+      transition: all 0.25s ease;
+    }
+
+    .signature-input::placeholder {
+      color: #c084fc;
+      font-weight: 500;
+      font-size: 14.5px;
     }
 
     .signature-input:focus {
-      border-bottom-color: #2563eb;
-      background-color: #eff6ff;
+      background-color: #ffffff;
+      border-bottom: 2.5px solid #7e22ce;
+      box-shadow: 0 8px 20px rgba(168, 85, 247, 0.12);
     }
 
     .sign-btn {
-      background: #2563eb;
+      background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
       color: #ffffff;
       border: none;
-      border-radius: 12px;
-      padding: 14px 20px;
+      border-radius: 20px;
+      padding: 16px 24px;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
-      transition: background 0.2s, transform 0.1s;
+      font-family: 'Comfortaa', cursive;
+      box-shadow: 0 8px 22px rgba(126, 34, 206, 0.32);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
 
     .sign-btn:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
+      background: linear-gradient(135deg, #9333ea 0%, #6b21a8 100%);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(126, 34, 206, 0.4);
     }
 
     .sign-btn:active {
@@ -121,31 +196,42 @@
 </head>
 <body>
 
+  <!-- Elementos decorativos no fundo -->
+  <div class="sparkle-bg" style="top: 10%; left: 8%;">✨</div>
+  <div class="sparkle-bg" style="bottom: 12%; left: 12%;">💜</div>
+  <div class="sparkle-bg" style="top: 15%; right: 10%;">🌸</div>
+  <div class="sparkle-bg" style="bottom: 18%; right: 9%;">✨</div>
+
   <main class="contract-card">
+    <div class="cute-tag">✦ Acordo de Carinho Oficial ✦</div>
+    
     <h1>Contrato de Namoro</h1>
     
     <p class="description">
-      Ao preencher este documento solene, você concorda em firmar um pacto irrevogável de carinho, beijinhos diários, paciência mútua e prioridade na escolha do cardápio do fim de semana.
+      Um pacto vitalício e selado com doçura: abraços diários garantidos, cafunés ilimitados e carinho infinito!
     </p>
 
-    <!-- Silhueta Vetorial: Mãos se apertando -->
+    <!-- Silhueta estilizada de aperto de mãos -->
     <div class="silhouette-wrapper">
+      <span class="mini-heart-floating">💜</span>
       <svg class="silhouette-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.9 8.2c-.4-.4-1-.5-1.5-.2l-2.4 1.4-2.2-2.2c-.8-.8-2-.8-2.8 0L9.4 8.8 8 7.4c-.4-.4-1-.4-1.4 0L4.8 9.2c-.4.4-.4 1 0 1.4l2.1 2.1c-.8.8-.8 2 0 2.8l2.8 2.8c.8.8 2 .8 2.8 0l1.4-1.4 1.4 1.4c.4.4 1 .4 1.4 0l1.8-1.8c.4-.4.4-1 0-1.4l-1.4-1.4 2.1-1.2c.5-.3.7-.9.4-1.4l-.9-1.5zM12 16.2l-2.8-2.8c-.2-.2-.2-.5 0-.7l2.8-2.8c.2-.2.5-.2.7 0l2.8 2.8c.2.2.2.5 0 .7L12 16.2z"/>
       </svg>
     </div>
 
-    <!-- Campo para digitar o nome e botão -->
+    <!-- Linha para nome e botão -->
     <form id="contractForm" class="input-group">
       <input 
         type="text" 
         id="girlfriendName" 
         class="signature-input" 
-        placeholder="Digite aqui sua assinatura (seu nome)" 
+        placeholder="Digite seu lindo nome aqui... ✍️" 
         required 
         autocomplete="off"
       />
-      <button type="submit" class="sign-btn">Assinar e Validar Acordo</button>
+      <button type="submit" class="sign-btn">
+        Assinar com Amor <span>💜</span>
+      </button>
     </form>
   </main>
 
@@ -157,7 +243,6 @@
       e.preventDefault();
       const name = input.value.trim();
       if (name) {
-        // Salva o nome para ler na página 2 e redireciona
         localStorage.setItem('girlfriendContractName', name);
         window.location.href = 'pagina2.html';
       }
