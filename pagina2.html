@@ -82,10 +82,10 @@
       height: 200%;
       background: conic-gradient(
         transparent,
-        #38bdf8,
-        #2563eb,
-        #1d4ed8,
-        #60a5fa,
+        lab(57.67% 78.4 -15.63),
+        hsl(318, 83%, 53%),
+        hsl(322, 76%, 48%),
+        hsl(329, 94%, 68%),
         transparent 65%
       );
       animation: spinBorder 4s linear infinite;
@@ -103,7 +103,7 @@
     /* Conteúdo interno do quadrado */
     .card-content {
       position: relative;
-      background: #1e293b; /* Fundo do card */
+      background: hsl(331, 33%, 17%); /* Fundo do card */
       border-radius: 25px;
       padding: 40px 32px;
       color: #f8fafc;
@@ -112,8 +112,8 @@
 
     .badge {
       display: inline-block;
-      background: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
+      background: rgba(248, 56, 178, 0.15);
+      color: hsl(313, 93%, 60%);
       padding: 6px 16px;
       border-radius: 999px;
       font-size: 13px;
@@ -121,7 +121,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 20px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      border: 1px solid hsla(324, 93%, 60%, 0.302);
     }
 
     h2 {
@@ -131,9 +131,9 @@
     }
 
     .highlight-name {
-      color: #60a5fa;
+      color: hsl(318, 94%, 68%);
       font-weight: 700;
-      text-shadow: 0 0 12px rgba(96, 165, 250, 0.4);
+      text-shadow: 0 0 12px hsla(321, 97%, 71%, 0.4);
     }
 
     .clause-list {
@@ -152,15 +152,15 @@
     .seal {
       margin-top: 24px;
       font-size: 13px;
-      color: #94a3b8;
-      border-top: 1px dashed #334155;
+      color: hsl(322, 20%, 65%);
+      border-top: 1px dashed hsl(316, 25%, 27%);
       padding-top: 18px;
     }
 
     .back-btn {
       display: inline-block;
       margin-top: 18px;
-      color: #38bdf8;
+      color: hsl(316, 93%, 60%);
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
@@ -168,7 +168,7 @@
     }
 
     .back-btn:hover {
-      color: #93c5fd;
+      color: hsl(330, 93%, 68%);
       text-decoration: underline;
     }
   </style>
@@ -210,7 +210,7 @@
 
     // Gerador de corações holográficos ao redor
     const container = document.getElementById('hologramBox');
-    const heartSymbols = ['🩵', '💙', '✨', '🤍', '✦'];
+    const heartSymbols = ['💓', '💕', '💘', '💗', '💝'];
 
     for (let i = 0; i < 24; i++) {
       const heart = document.createElement('div');
